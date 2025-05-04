@@ -99,14 +99,6 @@
   ],
   "awards": [
   ],
-  "projects": [
-  {
-    "name": "E-commerce Platform",
-    "description": "Developed a full-stack e-commerce website for a retail client.",
-    "technologies": ["React", "Node.js", "MongoDB"],
-    "url": "https://example.com"
-  }
-],
   "references": [
     {
       "name": "Available upon request"
