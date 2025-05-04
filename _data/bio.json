@@ -33,7 +33,9 @@
       "Python (basic)",
       "HTML",
       "CSS",
-      "SQL"
+      "SQL",
+      "PostgreSQL",
+      "Mongo (basic)"
     ]
   },
   {
@@ -42,9 +44,11 @@
       "React",
       "Next.js",
       "Node.js",
+      "Fastify.js",
       "Express",
       "Tailwind CSS",
       "Bootstrap",
+      "Material UI",
       "Sequelize"
     ]
   },
