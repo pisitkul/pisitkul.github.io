@@ -9,40 +9,66 @@
     "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2024.",
     "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
-      { "network": "github", "username": "mmaluhia", "url": "http://github.com/changeme" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/changeme" },
-      { "network": "twitter", "username": "mollymal", "url": "http://twitter.com/changeme" },
-      { "network": "instagram", "username": "molly", "url": "http://instagram.com/changeme" }
+      { "network": "github", "username": "pisitkul", "url": "https://github.com/pisitkul" },
+      { "network": "instagram", "username": "klosesss", "url": "https://www.instagram.com/klosesss" }
     ]
   },
   "interests": [
-    { "name": "Interactive media" },
-    { "name": "Neuromorphic Computing" },
-    { "name": "Quantum Computing" },
-    { "name": "Robotics" },
-    { "name": "3D Graphics" }
+  { "name": "Artificial Intelligence" },
+  { "name": "Cybersecurity" },
+  { "name": "Photography" },
+  { "name": "Sports" },
+  { "name": "Space Technology" },
+  { "name": "FinTech" },
+  { "name": "Game Development" },
+  { "name": "Edge Computing" },
+  { "name": "Entrepreneurship / Startups" }
   ],
   "skills": [
-    {
-      "name": "Languages and Frameworks",
-      "keywords": [ "C", "C++", "Java", "Javascript", "Assembly", "Common Lisp" ]
-    },
-    {
-      "name": "Toolsets/OS",
-      "keywords": [ "MacOS", "Ubuntu", "Git/GitHub", "g++", "TI LaunchPad" ]
-    }
-  ],
-  "education": [
-    {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
-      "studyType": "B.S.",
-      "startDate": "2013-09-01",
-      "endDate": "Present",
-      "courses": [
-      ]
-    }
-  ],
+  {
+    "name": "Languages",
+    "keywords": [
+      "JavaScript",
+      "TypeScript (basic)",
+      "Python (basic)",
+      "HTML",
+      "CSS",
+      "SQL"
+    ]
+  },
+  {
+    "name": "Frameworks and Libraries",
+    "keywords": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express",
+      "Tailwind CSS",
+      "Bootstrap",
+      "Sequelize"
+    ]
+  },
+  {
+    "name": "Tools & Platforms",
+    "keywords": [
+      "Git",
+      "GitHub",
+      "VS Code"
+    ]
+  }
+],
+ "education": [
+  {
+    "institution": "Non-Formal Education, Thailand",
+    "area": "High School",
+    "studyType": "High School Diploma",
+    "startDate": "2017-01-01",
+    "endDate": "2017-12-31",
+    "courses": [
+      "Artificial Intelligence (AI)"
+    ]
+  }
+],
   "work": [
     {
       "company": "UH Manoa Board of Publications",
