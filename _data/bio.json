@@ -7,7 +7,7 @@
     "phone": "",
     "website": "https://pisitkul.github.io/",
     "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2024.",
-    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "location": { "address": "", "postalCode": "", "city": "Bangkok", "countryCode": "TH", "region": "Central" },
     "profiles": [
       { "network": "github", "username": "pisitkul", "url": "https://github.com/pisitkul" },
       { "network": "instagram", "username": "klosesss", "url": "https://www.instagram.com/klosesss" }
@@ -98,8 +98,15 @@
   "volunteer": [
   ],
   "awards": [
- 
   ],
+  "projects": [
+  {
+    "name": "E-commerce Platform",
+    "description": "Developed a full-stack e-commerce website for a retail client.",
+    "technologies": ["React", "Node.js", "MongoDB"],
+    "url": "https://example.com"
+  }
+],
   "references": [
     {
       "name": "Available upon request"
