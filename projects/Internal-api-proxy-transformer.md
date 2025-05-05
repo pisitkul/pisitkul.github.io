@@ -10,34 +10,70 @@ labels:
   - API
   - CronJob
   - Internal Tools
-summary: "An internal tool that automatically fetches and transforms JSON data from an internal website into a structured API for cross-team use."
+summary: "Internal tool that transforms internal JSON APIs into structured formats based on partner requirements."
 ---
 
-<img class="img-fluid" src="../img/api-thumb.png">
-
-**Internal API Proxy Transformer** is a lightweight internal service I developed at my current company to solve a data integration challenge under tight constraints. The company did not want to invest in developing new backend APIs, so I created a Node.js service that periodically fetches JSON data from an internal web page using cron jobs, transforms and enriches the structure (e.g., adds missing `description` fields, renames unclear keys), and exposes a cleaned, structured internal API.
-
-This allowed our Taiwan team to reliably consume up-to-date data without requiring changes to the legacy system.
-
-<hr>
-
-**🔧 What It Does:**
-- Fetches JSON data from internal web pages that do not have dedicated APIs
-- Transforms the data (e.g., enriches with new fields, restructures for clarity)
-- Exposes a new internal API for consumption by cross-regional teams
-- Runs automatically on a defined schedule using CronJob
-
-**🛠 Tech Stack:**
-- Node.js + Express
-- CronJob (node-cron)
-- HTTP/JSON request and parsing
-- Internal hosting environment
-
-**💡 What I Learned:**
-- Designing pragmatic solutions within organizational limitations
-- Implementing automated data enrichment pipelines
-- Building internal middleware to connect systems and teams without disrupting upstream sources
+<img class="img-fluid" src="../img/api-thumb.png" alt="Internal API Proxy Transformer Preview" />
 
 ---
 
-*Note: The source code is proprietary and cannot be shared publicly, but I'm happy to explain the architecture or development process if needed.*
+## 🧩 Internal API Proxy Transformer
+
+A lightweight internal service that transforms legacy JSON data into a modern structured API, making it easier for partner teams to consume up-to-date data.
+
+---
+
+### 🌐 English Version
+
+**Internal API Proxy Transformer** is a small internal Node.js service I built to address a real-world integration problem. Our organization needed a way to share data with partners without modifying existing legacy systems or building new APIs.
+
+This service:
+- Periodically **fetches JSON data** from internal sources using **Cron Jobs**
+- **Transforms the structure** to match the format expected by partners (e.g., renaming keys, extracting fields)
+- **Exposes the cleaned data** as an internal API on a secure internal server
+
+Thanks to this solution, our partners can access consistent, up-to-date data without any impact on legacy systems.
+
+#### 🔧 Features:
+- Internal JSON fetching (no public API)
+- Custom transformation logic based on partner needs
+- Exposed via internal Express API
+- Scheduled with `node-cron`
+
+#### 🛠 Tech Stack:
+- Node.js + Express  
+- node-cron  
+- Axios / HTTP requests  
+- Internal server hosting
+
+> *Note: The source code is proprietary and cannot be shared publicly, but I’m happy to discuss the system architecture or implementation strategy.*
+
+---
+
+### 🇹🇭 ภาษาไทย
+
+**Internal API Proxy Transformer** เป็นบริการ Node.js ภายในขนาดเล็ก ที่ผมพัฒนาขึ้นเพื่อแก้ไขปัญหาการส่งต่อข้อมูลจากระบบเดิมไปยังพันธมิตร โดยไม่กระทบกับระบบต้นทาง
+
+ระบบนี้จะ:
+- ดึงข้อมูล JSON จาก API ภายในตามเวลาที่กำหนด (โดยใช้ Cron Job)
+- แปลงโครงสร้างข้อมูลให้ตรงกับรูปแบบที่พันธมิตรต้องการ เช่น เปลี่ยนชื่อ key หรือแยกค่าจากฟิลด์เดิมออกเป็นฟิลด์ใหม่
+- เปิด API ภายในให้สามารถเรียกใช้งานข้อมูลที่แปลงแล้วผ่านเครือข่ายภายในบริษัท
+
+ทำให้พันธมิตรสามารถเข้าถึงข้อมูลที่ถูกต้องและอัปเดตอยู่เสมอ โดยไม่ต้องรบกวนระบบต้นทาง
+
+#### 🔧 สิ่งที่เครื่องมือนี้ทำ:
+- ดึงข้อมูล JSON จาก API ภายในที่ไม่มี API สาธารณะ
+- แปลงโครงสร้างข้อมูลให้สอดคล้องกับความต้องการของพันธมิตร
+- เปิดให้เข้าถึงข้อมูลผ่าน Express API
+- ตั้งเวลาเรียกข้อมูลแบบอัตโนมัติด้วย `node-cron`
+
+#### 🛠 เทคโนโลยีที่ใช้:
+- Node.js + Express  
+- CronJob (node-cron)  
+- Axios / HTTP requests  
+- โฮสต์อยู่ในเซิร์ฟเวอร์ภายใน
+
+> *หมายเหตุ: ซอร์สโค้ดนี้เป็นกรรมสิทธิ์ของบริษัท ไม่สามารถเปิดเผยต่อสาธารณะได้ แต่สามารถอธิบายแนวทางหรือสถาปัตยกรรมของระบบได้หากสนใจ*
+
+---
+
