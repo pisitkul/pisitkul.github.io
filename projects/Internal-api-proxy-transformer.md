@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/api-thumb.png
+image: img/api-transform-square.png
 title: "Internal API Proxy Transformer"
 date: 2024
 published: true
