@@ -13,7 +13,7 @@ labels:
 summary: "An internal tool that automatically fetches and transforms JSON data from an internal website into a structured API for cross-team use."
 ---
 
-<img class="img-fluid" src="../img/internal-api/api-header.png">
+<img class="img-fluid" src="../img/api-thumb.png">
 
 **Internal API Proxy Transformer** is a lightweight internal service I developed at my current company to solve a data integration challenge under tight constraints. The company did not want to invest in developing new backend APIs, so I created a Node.js service that periodically fetches JSON data from an internal web page using cron jobs, transforms and enriches the structure (e.g., adds missing `description` fields, renames unclear keys), and exposes a cleaned, structured internal API.
 
