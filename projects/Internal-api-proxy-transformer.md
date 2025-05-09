@@ -74,7 +74,14 @@ Thanks to this solution, our partners can access consistent, up-to-date data wit
 - Axios / HTTP requests  
 - โฮสต์อยู่ในเซิร์ฟเวอร์ภายใน
 
-> *หมายเหตุ: ซอร์สโค้ดนี้เป็นกรรมสิทธิ์ของบริษัท ไม่สามารถเปิดเผยต่อสาธารณะได้ แต่สามารถอธิบายแนวทางหรือสถาปัตยกรรมของระบบได้หากสนใจ*
+> **หมายเหตุ / Note:**  
+ซอร์สโค้ดนี้เป็นโปรเจกต์ส่วนตัว และยังไม่ได้เปิดเผยต่อสาธารณะ  
+หากท่านสนใจรายละเอียดของระบบ แนวคิดการพัฒนา 
+**สามารถติดต่อสอบถามเพิ่มเติมได้โดยตรง**
+
+This is a private project, and the source code is currently not publicly available.  
+However, if you're interested in the system design, development concept,  
+**feel free to reach out for further discussion.**
 
 ---
 
