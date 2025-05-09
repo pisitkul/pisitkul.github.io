@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/cotton/cotton-square.png
+image: img/cotton/oms-square.png
 title: "Cotton"
 date: 2014
 published: true
