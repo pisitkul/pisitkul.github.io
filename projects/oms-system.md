@@ -11,6 +11,9 @@ labels:
   - Sequelize
   - Express.js
   - React.js
+  - CRUD
+  - Backend
+
 summary: "An integrated system for managing and tracking orders across multiple marketplaces by linking invoice, tracking, and order data to ensure accurate and efficient delivery."
 ---
 
