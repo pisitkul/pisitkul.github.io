@@ -1,13 +1,16 @@
 ---
 layout: project
 type: project
-image: img/cotton/oms-square.png
-title: "Cotton"
-date: 2014
+image: img/oms-square.png
+title: "OMS(online-management-system)"
+date: 2024
 published: true
 labels:
-  - Lisp
-  - GitHub
+  - Refine
+  - Typescript
+  - Sequelize
+  - Express.js
+  - React.js
 summary: "A text adventure game that I developed for ICS 313."
 ---
 
