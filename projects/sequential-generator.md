@@ -7,10 +7,11 @@ date: 2025
 published: true
 labels:
   - Node.js
-  - JavaScript
+  - TypeScript
   - npm
   - Open Source
-summary: "โมดูล Node.js สำหรับสร้างรหัสลำดับที่ไม่ซ้ำกัน พร้อมคำนำหน้าวันที่ที่ปรับแต่งได้และรองรับเขตเวลา"
+  - dayJs
+summary: "A Node.js module for generating unique, date-prefixed sequential codes with timezone support"
 ---
 
 # Sequential Generator
@@ -19,54 +20,61 @@ summary: "โมดูล Node.js สำหรับสร้างรหัส�
   <img src="../img/seq-generator-header.png" alt="Sequential Generator Banner">
 </div>
 
-## 🛠 Sequential Generator คืออะไร?
+## 🛠 What is Sequential Generator? (EN)
 
-ในแอปพลิเคชันขนาดเล็ก เรามักต้องการระบบสร้างรหัสเอกสาร เช่น ใบแจ้งหนี้ (`INV`) หรือคำสั่งซื้อที่มีวันที่และลำดับที่ชัดเจน **Sequential Generator** ถูกออกแบบมาเพื่อให้:
+In small applications, we often need a way to generate document IDs like invoices (`INV`) or order numbers with a clear date and sequence. **Sequential Generator** is designed to:
 
-- **รหัสไม่ซ้ำกัน** เป็นการนับต่อจากเลขเดิม
-- **เรียงลำดับได้** ตามลำดับเอกสารรายวัน
-- **ระบุวันที่ได้**
-- **รองรับ TimeZone** เช่น `Asia/Bangkok`, `UTC` โดยที่ module ใช้งาน [`day.js`](https://day.js.org/)
+- **Generate unique codes** by incrementing from the previous one
+- **Provide ordered codes** per day
+- **Include date information**
+- **Support TimeZones** such as `Asia/Bangkok`, `UTC` (powered by [`day.js`](https://day.js.org/))
 
-## 🚀 วิธีใช้งาน
+## How to Use 
 
-[sequential-generator](https://www.npmjs.com/package/sequential-generator) เป็นโมดูล Node.js โอเพนซอร์สสำหรับสร้างรหัสเอกสารอัตโนมัติ พร้อมคำนำหน้าวันที่ที่ปรับแต่งได้
+[sequential-generator](https://www.npmjs.com/package/sequential-generator) is an open-source Node.js module that generates customizable document codes with date prefixes.
 
 ตัวอย่าง:  
 ```plaintext
-SEX2505140001 → รหัสที่สร้างเมื่อ 14 พฤษภาคม 2025 พร้อมคำนำหน้า "SEX" และลำดับ "0001"
+SEX2505140001 → Generated on May 14, 2025 with prefix "SEX" and sequence "0001"
 ```
 
-## 🔑 คุณสมบัติ
-- ✔ รูปแบบ – กำหนด {prefix}{date}{sequence} 
-- 🌍 รองรับ TimeZone – กำหนดเขตเวลาใดก็ได้ (Asia/Bangkok, America/New_York)
-- 📅 รูปแบบวันที่ยืดหยุ่น – เลือกรูปแบบ เช่น YYMMDD, YYYYMM เป็นต้น
-- 🔢 ความยาวลำดับที่กำหนดได้ – เช่น 0001 สำหรับ 4 หลัก
-- 🛠 เครื่องมือตรวจสอบ – ตรวจสอบรหัสและแยกวันที่จากรหัสที่มีอยู่
-- ⏭ สร้างรหัสถัดไปอัตโนมัติ – คำนวณรหัสลำดับต่อไปได้
+## 🔑 Features 
+- ✔  Format – Define {prefix}{date}{sequence}
+- 🌍 TimeZone Support – e.g., Asia/Bangkok, America/New_York
+- 📅 Flexible Date Format – e.g., YYMMDD, YYYYMM
+- 🔢 Custom Sequence Length – e.g., 0001 for 4 digits
+- 🛠  Validation – Check and extract date from code
+- ⏭ Auto Increment – Generate the next code in sequence
 
 ``` js
-const SequentialGenerator = require('sequential-generator');
+import SequentialGenerator  from 'sequential-generator';
 
-// ตั้งค่าตามต้องการ
-const generator = new SequentialGenerator({
-  prefix: 'INV',
-  dateFormat: 'YYMMDD',
-  sequenceLength: 4,
-  timezone: 'Asia/Bangkok'
-});
+// Create a generator with prefix, timezone, default date format and sequence length
+const generator = new SequentialGenerator('SEX', 'Asia/Bangkok');
 
-// สร้างรหัสใหม่
-const invoiceNumber = generator.generate();
-// => INV2505140001
+// Generate a new code
+const newCode = generator.generate();
+console.log(newCode);  // Example output: SEX2305110001
 
-// รับรหัสลำดับถัดไป
-const nextInvoice = generator.next(invoiceNumber);
-// => INV2505140002
+// Validate a code
+const isValid = generator.validate('SEX2305110001');
+console.log(isValid);  // true or false
 
-// ตรวจสอบความถูกต้องของรหัส
-const isValid = generator.validate(invoiceNumber);
-// => true
+// Increment an existing code
+const incrementedCode = generator.increment('SEX2305110001');
+console.log(incrementedCode);  // Example output: SEX2305110002
+
+```
+
+### Max Limit
+
+```js
+const maxCode = 'SEX2305119999';  // Maximum for 4-digit sequence
+try {
+  console.log(generator.increment(maxCode));
+} catch (error) {
+  console.error(error.message);  // Output: "Maximum number reached. Cannot increment."
+}
 ```
 
 
