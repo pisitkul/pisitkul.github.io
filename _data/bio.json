@@ -63,14 +63,18 @@
 ],
  "education": [
   {
-    "institution": "Non-Formal Education, Thailand",
+    "institution": "High School Diploma, Thailand",
     "area": "High School",
     "studyType": "High School Diploma",
     "startDate": "2017-01-01",
     "endDate": "2017-12-31",
     "courses": [
-      "Artificial Intelligence (AI)"
-    ]
+  "Responsive Web Design Certification (FCC)",
+  "JavaScript Algorithms and Data Structures Certification (FCC)",
+  "Front End Development Libraries Certification (FCC)",
+  "Relational Database Certification (FCC)",
+  "Back End Development and APIs Certification (FCC)"
+]
   }
 ],
   "work": [
@@ -80,19 +84,20 @@
     "website": "",
     "startDate": "2018-01-01",
     "endDate": "Present",
-    "summary": "Developing and managing CMS, building pages, and creating APIs for various projects including e-commerce and warehouse management.",
+    "summary": "As a Web Developer at ITCity, I have been involved in developing and maintaining CMS platforms, designing and implementing APIs, and building web applications to streamline business operations. I have focused on improving efficiency through problem-solving and applying suitable technologies, particularly for e-commerce and warehouse management tasks.",
     "highlights": [
-      "Developed a new CMS to streamline content management and improve operational efficiency.",
-      "Created pages and APIs for sales platforms used during Commart events.",
-      "Designed and implemented systems for managing product packing and shipment from warehouse.",
-      "Reduced errors in the packing and shipment process, increasing operational efficiency."
-    ],
+  "Developed a new CMS to improve content management across various platforms, such as creating forms for data entry.",
+  "Designed APIs and databases for use with web applications.",
+  "Created a system for managing packaging and shipping processes, enhancing efficiency in the warehouse and reducing errors in product deliveries.",
+  "Improved organizational efficiency by providing solutions and addressing problems with appropriate technologies.",
+  "Developed web applications according to company requirements."
+],
     "technologies": [
-      "React",
+      "React.js",
       "Refine",
       "Node.js",
       "React Admin",
-      "Express",
+      "ExpressJs",
       "IIS Server",
       "PM2"
     ]
