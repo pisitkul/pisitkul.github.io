@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/sequential-generator/sequential-generator-banner.jpg
+image: img/seq-square.png
 title: "Sequential Generator"
 date: 2025
 published: true
