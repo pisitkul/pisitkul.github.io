@@ -1,0 +1,41 @@
+---
+title: Sequential Generator
+description: โมดูล Node.js สำหรับสร้างรหัสลำดับที่มีพรีฟิกซ์วันที่และรองรับ timezone
+layout: project_page
+date: 2025-05-10
+tags: [Node.js, NPM, Generator, Timezone]
+image: /assets/images/sequential-generator.png
+link: https://www.npmjs.com/package/sequential-generator
+---
+
+## รายละเอียดโปรเจกต์
+
+`sequential-generator` เป็นโมดูล Node.js ที่ช่วยในการสร้างรหัสลำดับที่มีพรีฟิกซ์วันที่และรองรับ timezone ซึ่งเหมาะสำหรับการใช้งานในระบบที่ต้องการรหัสที่ไม่ซ้ำกันและสามารถตรวจสอบย้อนกลับได้ง่าย เช่น ระบบใบแจ้งหนี้หรือระบบติดตามคำสั่งซื้อ
+
+### คุณสมบัติหลัก
+
+- **สร้างรหัสลำดับ**: รูปแบบ `{prefix}{date}{sequence}` เช่น `SEX2305110001`
+- **รองรับ timezone**: สามารถกำหนด timezone ได้ เช่น `Asia/Bangkok`
+- **ปรับแต่งรูปแบบวันที่**: รองรับรูปแบบวันที่ที่กำหนดเอง เช่น `YYMMDD`
+- **กำหนดความยาวของลำดับ**: สามารถกำหนดจำนวนหลักของลำดับได้ เช่น 4 หลัก (`0001`)
+- **ตรวจสอบความถูกต้องของรหัส**: มีฟังก์ชันสำหรับตรวจสอบว่ารหัสที่สร้างขึ้นถูกต้องหรือไม่
+- **เพิ่มลำดับถัดไป**: สามารถเพิ่มลำดับถัดไปจากรหัสที่มีอยู่แล้ว
+
+### วิธีการติดตั้ง
+
+```bash
+npm install sequential-generator
+```
+
+### ตัวอย่างการใช้งาน
+
+``` javascript
+import SequentialGenerator from 'sequential-generator';
+
+const generator = new SequentialGenerator('SEX', 'Asia/Bangkok');
+const newCode = generator.generate(); // ตัวอย่างผลลัพธ์: SEX2305110001
+```
+
+### ลิงค์ที่เกี่ยวข้อง
+[Link text](https://pisitkul.github.io/)
+
